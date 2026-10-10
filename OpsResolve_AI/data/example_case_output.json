@@ -1,0 +1,149 @@
+{
+  "system": "OpsResolve AI",
+  "mode": "Offline demonstration rules",
+  "processed_at_utc": "2026-10-10T11:00+00:00",
+  "ticket": {
+    "ticket_id": "DEMO-101",
+    "customer": "Northstar Components",
+    "stage": "Shipping",
+    "description": "Shipment has been stuck in transit; urgent customer deadline and revised ETA required.",
+    "impact": "High",
+    "order_value_usd": 62000,
+    "opened_at": "2026-10-09T06:00+00:00",
+    "last_updated_at": "2026-10-09T22:00+00:00",
+    "requested_category": "Auto-detect"
+  },
+  "triage": {
+    "category": "Delivery Delay",
+    "reason": "Matched 4 issue indicator(s) in the description.",
+    "source": "Transparent keyword/stage rules"
+  },
+  "policy": {
+    "priority": "P1",
+    "risk_score": 82,
+    "risk_components": {
+      "impact": 32,
+      "case_age": 8,
+      "staleness": 12,
+      "commercial_value": 16,
+      "critical_language": 14
+    },
+    "category": "Delivery Delay",
+    "owner": "Logistics / Operations",
+    "response_target_hours": 2,
+    "resolution_target_hours": 8,
+    "opened_hours_ago": 29.0,
+    "hours_since_update": 13.0,
+    "response_due_utc": "2026-10-09T08:00+00:00",
+    "resolution_due_utc": "2026-10-09T14:00+00:00",
+    "response_target_elapsed": true,
+    "resolution_target_elapsed": true,
+    "escalation": "L2 - Operations Manager",
+    "playbook": [
+      "Check carrier and warehouse tracking information.",
+      "Request a verified revised ETA from the shipping owner.",
+      "Share a factual update with the customer; review alternatives if delay persists."
+    ],
+    "policy_note": "Illustrative SLA using calendar hours. Response breach cannot be confirmed without a response-event timestamp; 'target elapsed' indicates time passed since opening."
+  },
+  "resolution": {
+    "summary": "Delivery Delay case requiring follow-up by Logistics / Operations.",
+    "next_steps": [
+      "Check carrier and warehouse tracking information.",
+      "Request a verified revised ETA from the shipping owner.",
+      "Share a factual update with the customer; review alternatives if delay persists."
+    ],
+    "customer_draft": "Subject: Update regarding case DEMO-101\n\nDear Northstar Components,\n\nWe are reviewing the issue reported under reference DEMO-101. Our team is checking the relevant details with the responsible department. We will share a confirmed update once the verification is complete.\n\nRegards,\nCustomer Operations Team",
+    "internal_note": "No external action was performed. Verify all operational facts before communication.",
+    "source": "Policy playbook / demonstration logic"
+  },
+  "qa": {
+    "approved_for_human_review": true,
+    "checks": [
+      "Suggested actions, not automatic execution",
+      "Owner and SLA calculated from policy",
+      "Customer communication requires human approval"
+    ],
+    "flags": [],
+    "source": "Explicit rule checks"
+  },
+  "trace": [
+    {
+      "agent": "01 / Intake & Triage",
+      "result": {
+        "category": "Delivery Delay",
+        "reason": "Matched 4 issue indicator(s) in the description.",
+        "source": "Transparent keyword/stage rules"
+      }
+    },
+    {
+      "agent": "02 / SLA & Risk Assessment",
+      "result": {
+        "priority": "P1",
+        "risk_score": 82,
+        "risk_components": {
+          "impact": 32,
+          "case_age": 8,
+          "staleness": 12,
+          "commercial_value": 16,
+          "critical_language": 14
+        },
+        "category": "Delivery Delay",
+        "response_target_hours": 2,
+        "resolution_target_hours": 8,
+        "opened_hours_ago": 29.0,
+        "hours_since_update": 13.0,
+        "response_due_utc": "2026-10-09T08:00+00:00",
+        "resolution_due_utc": "2026-10-09T14:00+00:00",
+        "response_target_elapsed": true,
+        "resolution_target_elapsed": true,
+        "escalation": "L2 - Operations Manager",
+        "policy_note": "Illustrative SLA using calendar hours. Response breach cannot be confirmed without a response-event timestamp; 'target elapsed' indicates time passed since opening."
+      }
+    },
+    {
+      "agent": "03 / Ownership & Routing",
+      "result": {
+        "assigned_team": "Logistics / Operations",
+        "routing_basis": "Approved category-to-owner mapping for Delivery Delay",
+        "human_assignment_required": true,
+        "note": "Team ownership only. Individual workload / staff availability not connected."
+      }
+    },
+    {
+      "agent": "04 / Resolution Planning",
+      "result": {
+        "summary": "Delivery Delay case requiring follow-up by Logistics / Operations.",
+        "next_steps": [
+          "Check carrier and warehouse tracking information.",
+          "Request a verified revised ETA from the shipping owner.",
+          "Share a factual update with the customer; review alternatives if delay persists."
+        ],
+        "internal_note": "No external action was performed. Verify all operational facts before communication.",
+        "source": "Policy playbook / demonstration logic"
+      }
+    },
+    {
+      "agent": "05 / Customer Communications",
+      "result": {
+        "draft": "Subject: Update regarding case DEMO-101\n\nDear Northstar Components,\n\nWe are reviewing the issue reported under reference DEMO-101. Our team is checking the relevant details with the responsible department. We will share a confirmed update once the verification is complete.\n\nRegards,\nCustomer Operations Team",
+        "draft_only": true,
+        "source": "Policy playbook / demonstration logic"
+      }
+    },
+    {
+      "agent": "06 / Quality & Risk Review",
+      "result": {
+        "approved_for_human_review": true,
+        "checks": [
+          "Suggested actions, not automatic execution",
+          "Owner and SLA calculated from policy",
+          "Customer communication requires human approval"
+        ],
+        "flags": [],
+        "source": "Explicit rule checks"
+      }
+    }
+  ],
+  "safety": "Decision support only. Human must verify policy, facts and approve actions. No external action taken."
+}

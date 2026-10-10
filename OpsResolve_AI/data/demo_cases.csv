@@ -1,0 +1,6 @@
+ticket_id,customer,stage,description,impact,order_value_usd,hours_open,hours_since_update
+DEMO-101,Northstar Components,Shipping,Shipment has been stuck in transit; urgent customer deadline and revised ETA required.,High,62000,29,13
+DEMO-102,Acme Industrial,Payment,Invoice mismatch and credit approval pending; account team needs the remittance status.,Medium,12500,12,5
+DEMO-103,Bluepeak Machines,Delivery,Customer reported a damaged pump; photographs and supplier replacement authorization are needed.,High,34000,51,28
+DEMO-104,Aster Labs,Compliance,Supplier onboarding blocked because a current insurance certificate is missing.,Low,4800,5,1
+DEMO-105,Cobalt Industries,Quotation,RFQ received for industrial fasteners; customer requested pricing and lead time.,Medium,900,2,1
